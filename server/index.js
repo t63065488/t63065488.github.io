@@ -79,15 +79,18 @@ const root = UNSAFE_withComponentProps(function App() {
 const ErrorBoundary = UNSAFE_withErrorBoundaryProps(function ErrorBoundary2({
   error
 }) {
+  let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack;
   if (isRouteErrorResponse(error)) {
-    error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? "404" : "Error";
     details = error.status === 404 ? "The requested page could not be found." : error.statusText || details;
   }
   return /* @__PURE__ */ jsxs("main", {
     className: "pt-16 p-4 container mx-auto",
-    children: [/* @__PURE__ */ jsx("p", {
+    children: [/* @__PURE__ */ jsx("h1", {
+      children: message
+    }), /* @__PURE__ */ jsx("p", {
       children: details
     }), stack]
   });
@@ -202,7 +205,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: home,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-DrPHaCgo.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-DYxGavC8.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": ["/assets/root-QLPvu8kQ.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-CaaAbdUI.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-7796c9b9.js", "version": "7796c9b9", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/assets/entry.client-DrPHaCgo.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-Cl2J5IS7.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": ["/assets/root-QLPvu8kQ.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-CaaAbdUI.js", "imports": ["/assets/chunk-C37GKA54-DbvhLxwn.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-97eb37ec.js", "version": "97eb37ec", "sri": void 0 };
 const assetsBuildDirectory = "build/client";
 const basename = "/";
 const future = { "unstable_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
