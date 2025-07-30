@@ -9,7 +9,8 @@
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client"
+    "deploy": "gh-pages -d build/client",
+    "lint": "prettier --write . && eslint . --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
