@@ -9,15 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import {
-  AppBar,
-  Box,
-  Container,
-  createTheme,
-  ThemeProvider,
-  Typography,
-} from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
+import SideNavigation from "./components/SideNavigation";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,18 +28,9 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "#1976d2",
-    },
-  },
-});
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html data-theme="cerberus" lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,41 +38,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <ThemeProvider theme={darkTheme}>
-          <AppBar position="static">
-            <Container maxWidth="xl">
-              <Box
-                sx={{
-                  flexGrow: 1,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <CodeIcon sx={{ display: { xs: "flex" }, mr: 1 }} />
-                <Typography
-                  variant="h5"
-                  noWrap
-                  sx={{
-                    mr: 2,
-                    flexGrow: 1,
-                    fontFamily: "monospace",
-                    fontWeight: 700,
-                    letterSpacing: ".3rem",
-                    color: "inherit",
-                    textDecoration: "none",
-                  }}
-                  component="a"
-                  href="/"
-                >
-                  t63065488
-                </Typography>
-              </Box>
-            </Container>
-          </AppBar>
+        <div className="w-full h-screen grid grid-cols-[auto_1fr] items-stretch border border-surface-200-800">
+          <SideNavigation />
           {children}
-          <ScrollRestoration />
-          <Scripts />
-        </ThemeProvider>
+        </div>
+        <ScrollRestoration />
+        <Scripts />
       </body>
     </html>
   );

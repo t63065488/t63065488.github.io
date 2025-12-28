@@ -10,13 +10,10 @@
     "lint": "prettier . --check && eslint ./app"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.6",
-    "@mui/material": "^7.3.6",
     "@react-router/node": "7.10.1",
     "@react-router/serve": "7.10.1",
     "isbot": "^5.1.31",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router": "7.10.1"
@@ -24,7 +21,9 @@
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@react-router/dev": "7.10.1",
-    "@tailwindcss/vite": "^4.1.13",
+    "@skeletonlabs/skeleton": "^4.8.0",
+    "@skeletonlabs/skeleton-react": "^4.8.0",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^22",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
@@ -32,7 +31,7 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.5.0",
     "prettier": "3.7.4",
-    "tailwindcss": "^4.1.13",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.50.1",
     "vite": "^7.1.7",
