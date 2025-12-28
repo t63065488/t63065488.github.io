@@ -7,13 +7,17 @@ it("should render", () => {
   expect(container).toBeInTheDocument();
 });
 
-it.each([["Blog"], ["Projects"], ["GitHub"], ["LinkedIn"], ["About"]])(
-  "should render %s link",
-  (link: string) => {
-    render(<SideNavigation />);
+it.each([
+  ["t63065488"],
+  ["Blog"],
+  ["Projects"],
+  ["GitHub"],
+  ["LinkedIn"],
+  ["About"],
+])("should render %s link", (link: string) => {
+  render(<SideNavigation />);
 
-    const navLink = screen.getByText(link);
+  const navLink = screen.getByText(link);
 
-    expect(navLink).toBeInTheDocument();
-  },
-);
+  expect(navLink).toBeInTheDocument();
+});
