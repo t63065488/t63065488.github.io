@@ -33,11 +33,11 @@ const SideNavigation = (): React.ReactNode => {
       href: "https://www.linkedin.com/in/thomas-millward-273977396/",
       icon: LinkedinIcon,
     },
-          {
-        label: "About",
-        href: "/about",
-        icon: InfoIcon,
-      },
+    {
+      label: "About",
+      href: "/about",
+      icon: InfoIcon,
+    },
   ];
 
   const getLinkObject = (descriptor: LinkDescriptor): React.ReactNode => {
