@@ -7,14 +7,15 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          cache: 'npm'
+          node-version: lts/*
+          cache: "npm"
       - name: Install dependencies
         run: npm ci
       - name: Run tests
