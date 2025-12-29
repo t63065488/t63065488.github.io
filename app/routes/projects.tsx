@@ -1,3 +1,4 @@
+import ProjectsView from "~/pages/ProjectsView";
 import type { Route } from "./+types/home";
 
 export function meta(_: Route.MetaArgs) {
@@ -5,7 +6,7 @@ export function meta(_: Route.MetaArgs) {
 }
 
 const Projects = (): React.ReactNode => {
-  return <></>;
+  return <ProjectsView />;
 };
 
 export default Projects;
