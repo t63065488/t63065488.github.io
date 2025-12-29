@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <div className="w-full h-screen grid grid-cols-[auto_1fr] items-stretch border border-surface-200-800">
           <SideNavigation />
-          {children}
+          <main className="space-y-4 p-4">{children}</main>
         </div>
         <ScrollRestoration />
         <Scripts />
