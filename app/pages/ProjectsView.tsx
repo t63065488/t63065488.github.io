@@ -12,6 +12,7 @@ const ProjectsView = (): React.ReactNode => {
           href="https://github.com/t63065488/void-codex"
           imgSrc="/void-codex-header.png"
           tags={["React", "Pixi.js", "Golang", "Kubernetes"]}
+          onDate="2025-11-29"
         />
         <ProjectCard
           body="Something something data sorting."
@@ -20,6 +21,7 @@ const ProjectsView = (): React.ReactNode => {
           href="https://github.com/t63065488/ubiquitous-lamp"
           imgSrc="/ubiquitous-lamp-header.png"
           tags={["Svelte"]}
+          onDate="2025-08-03"
         />
       </div>
     </div>

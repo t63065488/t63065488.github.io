@@ -50,7 +50,7 @@ const ProjectCard = ({
           )}
         </article>
         <footer className="flex items-center justify-between gap-4 p-4">
-          <small className="opacity-60">On {onDate}</small>
+          <small className="opacity-60">Started {onDate}</small>
         </footer>
       </a>
     </>
