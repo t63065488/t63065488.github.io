@@ -30,7 +30,7 @@ const BlogCard = ({
         <div className="flex items-center justify-start gap-4">
           <span className="preset-typo-caption opacity-60">Tags:</span>
           {tags.map((tag) => (
-            <Badge text={tag} />
+            <Badge key={tag} text={tag} />
           ))}
         </div>
       </article>

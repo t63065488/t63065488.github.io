@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router";
-import BlogCard from "~/components/blog-card/BlogCard";
 import BlogView from "~/pages/BlogView";
 import type { MdxModule } from "~/types/MdxModule";
 import type { PostMetadata } from "~/types/PostMetadata";
