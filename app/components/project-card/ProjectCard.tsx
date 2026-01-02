@@ -1,3 +1,5 @@
+import Badge from "~/components/badge/Badge";
+
 type ProjectCardProps = Readonly<{
   title: string;
   subtitle?: string;
@@ -5,6 +7,7 @@ type ProjectCardProps = Readonly<{
   imgSrc?: string;
   href: string;
   onDate?: string;
+  tags?: string[];
 }>;
 
 const ProjectCard = ({
@@ -14,6 +17,7 @@ const ProjectCard = ({
   imgSrc,
   href = "#",
   onDate = "",
+  tags = [],
 }: ProjectCardProps): React.ReactNode => {
   return (
     <>
@@ -36,6 +40,14 @@ const ProjectCard = ({
             <h3 className="h6">{subtitle}</h3>
           </div>
           <p className="opacity-60">{body}</p>
+          {tags.length !== 0 && (
+            <div className="flex items-center justify-start gap-4">
+              <span className="preset-typo-caption opacity-60">Tags:</span>
+              {tags.map((tag) => (
+                <Badge key={tag} text={tag} />
+              ))}
+            </div>
+          )}
         </article>
         <footer className="flex items-center justify-between gap-4 p-4">
           <small className="opacity-60">On {onDate}</small>

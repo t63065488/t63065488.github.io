@@ -11,6 +11,7 @@ const ProjectsView = (): React.ReactNode => {
           subtitle="A VTT application."
           href="https://github.com/t63065488/void-codex"
           imgSrc="/void-codex-header.png"
+          tags={["React", "Pixi.js", "Golang", "Kubernetes"]}
         />
         <ProjectCard
           body="Something something data sorting."
@@ -18,6 +19,7 @@ const ProjectsView = (): React.ReactNode => {
           subtitle="Client-side data handling, sorting and sampling."
           href="https://github.com/t63065488/ubiquitous-lamp"
           imgSrc="/ubiquitous-lamp-header.png"
+          tags={["Svelte"]}
         />
       </div>
     </div>
