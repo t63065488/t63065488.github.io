@@ -1,0 +1,21 @@
+@keyframes pop-in-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-in-header {
+  animation: pop-in-bounce 0.5s ease-out;
+}
+
+.pop-in-content {
+  animation: pop-in-bounce 0.5s ease-out 0.5s backwards;
+}

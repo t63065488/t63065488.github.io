@@ -1,4 +1,4 @@
-import Badge from "~/components/badge/Badge";
+import Badge from "../badge/Badge";
 
 type ProjectCardProps = Readonly<{
   title: string;

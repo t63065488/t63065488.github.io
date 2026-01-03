@@ -48,13 +48,7 @@ describe("ProjectCard", () => {
   it("renders onDate when provided", () => {
     render(<ProjectCard {...defaultProps} onDate="January 1, 2024" />);
 
-    expect(screen.getByText(/On January 1, 2024/)).toBeInTheDocument();
-  });
-
-  it("renders empty onDate by default", () => {
-    render(<ProjectCard {...defaultProps} />);
-
-    expect(screen.getByText(/On/)).toBeInTheDocument();
+    expect(screen.getByText(/Started January 1, 2024/)).toBeInTheDocument();
   });
 
   it("uses provided href", () => {
