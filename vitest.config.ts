@@ -6,6 +6,11 @@ export default defineConfig({
     globals: true,
     environment: "happy-dom",
     setupFiles: ["./vitest-setup.ts"],
+    coverage: {
+      thresholds: {
+        lines: 80,
+      },
+    },
     alias: {
       "~": path.resolve(__dirname, "./app"),
     },
