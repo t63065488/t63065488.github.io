@@ -7,6 +7,8 @@ import {
   LinkedinIcon,
   NotebookTextIcon,
 } from "lucide-react";
+import React from "react";
+import { socials } from "~/utils/Socials";
 
 type LinkDescriptor = {
   label: string;
@@ -18,31 +20,21 @@ type LinkDescriptor = {
 const SideNavigation = (): React.ReactNode => {
   const links: { [key: string]: LinkDescriptor[] } = {
     sections: [
-      { label: "Blog", href: "/blog", icon: NotebookTextIcon },
-      { label: "Projects", href: "/projects", icon: CodeIcon },
+      { label: "Blog", href: "/blog", icon: <NotebookTextIcon /> },
+      { label: "Projects", href: "/projects", icon: <CodeIcon /> },
     ],
   };
 
   const footerLinks: LinkDescriptor[] = [
-    {
-      label: "GitHub",
-      href: "https://github.com/t63065488",
-      icon: GithubIcon,
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/thomas-millward-273977396/",
-      icon: LinkedinIcon,
-    },
+    ...socials,
     {
       label: "About",
       href: "/about",
-      icon: InfoIcon,
+      icon: <InfoIcon />,
     },
   ];
 
   const getLinkObject = (descriptor: LinkDescriptor): React.ReactNode => {
-    const Icon = descriptor.icon;
     return (
       <Navigation.TriggerAnchor
         key={descriptor.label}
@@ -50,7 +42,7 @@ const SideNavigation = (): React.ReactNode => {
         aria-label={descriptor.label}
         href={descriptor.href}
       >
-        <Icon className="size-4" />
+        {React.cloneElement(descriptor.icon, { className: "size-4" })}
         <Navigation.TriggerText>{descriptor.label}</Navigation.TriggerText>
       </Navigation.TriggerAnchor>
     );

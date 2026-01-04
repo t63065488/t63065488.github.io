@@ -1,3 +1,4 @@
+import path from "path";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
@@ -5,5 +6,8 @@ export default defineConfig({
     globals: true,
     environment: "happy-dom",
     setupFiles: ["./vitest-setup.ts"],
+    alias: {
+      "~": path.resolve(__dirname, "./app"),
+    },
   },
 });
