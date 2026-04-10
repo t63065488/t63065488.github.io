@@ -1,4 +1,4 @@
-import { Menu, Navigation } from "@skeletonlabs/skeleton-react";
+import { Navigation } from "@skeletonlabs/skeleton-react";
 import {
   BriefcaseIcon,
   CodeIcon,

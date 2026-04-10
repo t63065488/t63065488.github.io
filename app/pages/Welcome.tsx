@@ -215,7 +215,7 @@ const Welcome = (): React.ReactNode => {
                 <p className="text-xs text-surface-400">Amazon Web Services</p>
               </div>
               <a
-                href="https://cp.certmetrics.com/amazon/en/public/verify/credential/5680885c812a47b59eb683c9d2bb6da2"
+                href="https://www.credly.com/badges/67f54b8a-c9af-40ef-a081-4135aadb44ae/public_url"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-sm preset-filled-primary-500"
