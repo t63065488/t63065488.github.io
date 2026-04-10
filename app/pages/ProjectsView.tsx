@@ -4,7 +4,7 @@ const ProjectsView = (): React.ReactNode => {
   return (
     <div className="flex flex-col items-center justify-center pt-16 pb-4">
       <h1 className="h1 mb-8">Projects</h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ProjectCard
           body="Void Codex!"
           title="Void Codex"

@@ -1,4 +1,5 @@
 import Badge from "../badge/Badge";
+import "./ProjectCard.css";
 
 type ProjectCardProps = Readonly<{
   title: string;
@@ -29,7 +30,7 @@ const ProjectCard = ({
           <header>
             <img
               src={imgSrc}
-              className="aspect-[21/9] w-full grayscale hue-rotate-90"
+              className="aspect-[21/9] w-full grayscale hue-rotate-90 project-card-img"
               alt="banner"
             />
           </header>

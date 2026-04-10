@@ -1,0 +1,7 @@
+.project-card-img {
+  transition: filter 0.3s ease-out;
+}
+
+.card:hover .project-card-img {
+  filter: none;
+}

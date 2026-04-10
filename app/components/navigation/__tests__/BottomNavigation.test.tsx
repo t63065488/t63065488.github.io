@@ -1,23 +1,23 @@
 import { render, screen } from "@testing-library/react";
-import SideNavigation from "../SideNavigation";
+import BottomNavigation from "../BottomNavigation";
 
 it("should render", () => {
-  const { container } = render(<SideNavigation />);
+  const { container } = render(<BottomNavigation />);
 
   expect(container).toBeInTheDocument();
 });
 
 it.each([
-  ["t63065488"],
   ["Blog"],
   ["Projects"],
   ["GitHub"],
   ["LinkedIn"],
+  ["Twitter"],
   ["About"],
 ])("should render %s link", (link: string) => {
-  render(<SideNavigation />);
+  render(<BottomNavigation />);
 
-  const navLink = screen.getByText(link);
+  const navLink = screen.getByLabelText(link);
 
   expect(navLink).toBeInTheDocument();
 });

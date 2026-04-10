@@ -8,6 +8,7 @@
     transform: scale(1.1);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -17,5 +18,32 @@
 }
 
 .pop-in-content {
-  animation: pop-in-bounce 0.5s ease-out 0.5s backwards;
+  opacity: 0;
+  animation: pop-in-bounce 0.5s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}
+
+.delay-4 {
+  animation-delay: 2s;
+}
+
+.delay-5 {
+  animation-delay: 2.5s;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem 8rem 1rem;
+  }
 }

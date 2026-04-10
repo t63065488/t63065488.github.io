@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import SideNavigation from "./components/side-navigation/SideNavigation";
+import BottomNavigation from "./components/navigation/BottomNavigation";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,9 +38,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <div className="w-full h-screen grid grid-cols-[auto_1fr] items-stretch border border-surface-200-800">
-          <SideNavigation />
-          <main className="space-y-4 p-4">{children}</main>
+        <div className="w-full min-h-screen flex flex-col items-stretch border border-surface-200-800">
+          <main className="flex-1 space-y-4 p-4 overflow-x-hidden pb-32">
+            {children}
+          </main>
+          <BottomNavigation />
         </div>
         <ScrollRestoration />
         <Scripts />
